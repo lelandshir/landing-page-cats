@@ -10,7 +10,6 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
 			rel="stylesheet"
 		/>
-		<script type="module" src="./src/main.js"></script>
 	</head>
 	<body>
 		<div class="container">
@@ -84,18 +83,21 @@
 
 			<!-- Treats Section -->
 			<div class="treats-section">
+				<h3 id="treat-heading">OUR TREAT</h3>
 				<section class="treats">
-					<h3 id="treat-heading">OUR TREAT</h3>
-					<div class="treat-container">
-						<img class="treat-bag-1" src="./public//assets/images/treats.png" alt="cat treats" />
-						<img
-							class="treat-bag-2"
+						<div class="treat-bag-1">
+							<img src="./public//assets/images/treats.png" alt="cat treats" />
+							<h3>Freeze Dried Minnows</h3>
+							<p>Healthy ingredients with nothing to hide.</p>
+						</div>
+						
+						<div class="treat-bag-2">
+							<img
 							src="./public//assets/images/treats.png"
-							alt="cat treats"
-						/>
-					</div>
-					<h3>Freeze Dried Minnows</h3>
-					<p>Healthy ingredients with nothing to hide.</p>
+							alt="cat treats"/>
+							<h3>Freeze Dried Minnows</h3>
+							<p>Healthy ingredients with nothing to hide.</p>
+						</div>
 				</section>
 			</div>
 
@@ -112,22 +114,17 @@
 							$59 a year.
 						</p>
 						<div id="services">
-							<div>
-								<i class="fas fa-check">
-									<p>Cancel anytime during your free trial.</p>
-								</i>
+							<div class="checked-content">
+								<i class="fas fa-check"></i>
+								<p style="display: inline-block;">Cancel anytime during your free trial.</p>
 							</div>
-							<div>
-								<i class="fas fa-check">
-									<p>Free shipping on orders over $45.</p>
-								</i>
+							<div class="checked-content">
+								<i class="fas fa-check"></i>
+								<p>Free shipping on orders over $45.</p>
 							</div>
-							<div>
-								<i class="fas fa-check">
-									<p>
-										Direct to consumer prices on hundreds of premium products.
-									</p>
-								</i>
+							<div class="checked-content">
+								<i class="fas fa-check"></i>
+								<p>Direct to consumer prices on hundreds of premium products.</p>
 							</div>
 						</div>
 				</section>

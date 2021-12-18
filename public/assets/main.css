@@ -1,19 +1,12 @@
 html,
 body {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
+	max-width: fit-content;
 }
+
 /* containers */
-.mag-cart-container {
-	display: flex;
-	align-items: center;
-}
-
-.treat-container {
-	display: flex;
-}
-
 .container {
 	display: grid;
 	grid-template-areas:
@@ -25,8 +18,21 @@ body {
 		"pet-approved";
 }
 
-/* Grid Children */
+.mag-cart-container {
+	align-items: center;
+}
 
+.checked-content {
+	display: flex;
+	align-items: baseline;
+}
+
+.checked-content > .fas,
+p {
+	display: inline-block;
+}
+
+/* Grid Children */
 .main-section {
 	margin-bottom: 3rem;
 	grid-area: main-content;
@@ -41,6 +47,7 @@ body {
 }
 
 .treats-section {
+	background-color: #e6e7e8;
 	grid-area: treats;
 }
 
@@ -71,18 +78,21 @@ body {
 }
 
 .treats {
-	width: 100%;
+	justify-content: center;
 	background: #e6e7e8;
 	text-align: center;
-	padding: 1rem 0 1rem 0;
+	padding: 2rem 0 2rem 0;
+	display: flex;
+	align-content: center;
 }
 
 .treats-contents {
 	text-align: center;
 }
 
-.treats > h3 {
-	margin-bottom: -3rem;
+.treats-section > h3 {
+	margin-bottom: -4rem;
+	text-align: center;
 }
 
 .main {
@@ -116,6 +126,11 @@ article {
 	margin: -15px 0 -15px 0;
 }
 
+ul > li > p {
+	display: list-item;
+	color: black;
+}
+
 /* icons */
 #menu-icon {
 	border-top: 1px solid black;
@@ -135,10 +150,15 @@ article {
 	margin-right: 2.5rem;
 }
 
+.fa-check {
+	transform: rotate(-10deg);
+	margin-right: 0.5rem;
+}
+
 /* text */
 .fa-check > p {
 	max-width: 22ch;
-	margin-left: 0.5rem;
+	margin-left: 1rem;
 	font-size: 0.9rem;
 }
 
@@ -216,6 +236,7 @@ img {
 	cursor: pointer;
 	position: fixed;
 	bottom: 0;
+	z-index: 1000;
 }
 
 #claim-offer:hover {
@@ -231,7 +252,6 @@ img {
 /* breakpoints */
 @media only screen and (min-width: 800px) {
 	.container {
-		width: 50%;
 		grid-template-columns: 1fr 1fr;
 		grid-template:
 			[row1-start] "main-content main-cat"
@@ -279,5 +299,9 @@ img {
 
 	.treat-bag-1 {
 		margin-left: 16rem;
+	}
+
+	.treats {
+		justify-content: unset;
 	}
 }
