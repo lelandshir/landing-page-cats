@@ -1,13 +1,15 @@
 html,
-body {
+body,
+.container {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 	margin: 0 auto;
 	padding: 0;
-	max-width: fit-content;
 }
 
 /* containers */
 .container {
+	margin: 0;
+	padding: 0;
 	display: grid;
 	grid-template-areas:
 		"mobile-nav"
